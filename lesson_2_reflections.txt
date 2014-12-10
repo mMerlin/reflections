@@ -37,6 +37,16 @@ change?
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+	New version development while still supporting the production version.
+	Exploration / Experimentation without interfering with other changes.
+	Multiple developer concurrent work on different features or bugs.
+
+	An active / checked out branch simplifies making and tracking a (logical)
+	series of changes while unrelated changes can still occur in other branches.
+	The other changes could be done by other people, or in other work areas, or
+	by switching (checkout) branches as needed.  Using good names for the
+	branches shows the different things being worked on.
+
 How do the diagrams help you visualize the branch structure?
 
 What is the result of merging two branches together? Why do we represent it in
