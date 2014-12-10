@@ -1,0 +1,42 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	Initializing creates a (hidden) ".git" subdirectory in the current /
+	specified directory.  That directory contains a bunch of additional files
+	and subdirectories containing the repository information.  Effectively, the
+	.git directory is a database that holds (will hold) all of the commit
+	(state) information.  This is needed to tell git / the system that the
+	directory is to be tracked / managed by git; that it is a working directory
+	for a git repository.
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+	The staging area contains only those files that are candidates for the next
+	commit.  The repository contains all versions of all files, plus additional
+	information, for all previous commits.  The working directory can really
+	contain anything: Each file in the working directory could match a file in
+	the stating area, any commited version of a file, a file that does not
+	exist in either the staging area or repository.  Files that existing in the
+	staging area or repository might not existing (any longer) in the working
+	directory.
+
+	The staging area provides a way to group changes in preparation for a
+	single logical commit.  Even if the modified files in the working directory
+	are for multiple logical changes, only those files associated with one of
+	the (logical) changes needs to be put into the staging area.  This only
+	works of course, if all modifications in a single file are for a single
+	change.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+manually?
