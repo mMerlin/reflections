@@ -1,0 +1,52 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+	By showing only the lines that had changed, the amount of checking was
+	greatly reduced.  It also keeps the changes conveniently close together
+	on the screen, making the manual checking easier.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    There are many ways and reasons.  Able to easily see and rollback previous
+    changes that are later discovered to be incorrect.  See what sections of
+    the code have been changing most often.  See changes that then needed to be
+    changed again to learn common errors.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pros: Extremely flexible and takes advantage of user knowledge of the
+    context to bundle the appropriate set of changes.
+    Cons: Relies on the user to do the correct thing at the correct time.
+    Important things can get missed due to user errors.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Project versus document version control.  Even if Google Docs is being used
+    for a multiple document project, there is no inherent way of determining
+    which file changes go together.  Also, Google Docs only works online, so
+    not saving changes risks losing them if the Internet connection goes down.
+    Having separate save and commit operations would increase complexity, and
+    potentially confuse users that are not familiary with version control.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    git log shows information about the revisions over time, with author, date,
+    a (hopefully) descriptive message about the reason for the changes.  git
+    diff shows details of the actual changes to each file in the repository
+    (typically a project).  The combination should give a multiple level view
+    of the history.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    Version control allows (easy) reverting to a previous version, so risky
+    changes become much safer.  They can reliably be undone if they are found
+    to cause new problems.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    version control of text files.  Code and notes.
