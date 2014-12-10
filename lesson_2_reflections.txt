@@ -49,6 +49,11 @@ organized? How would branches help?
 
 How do the diagrams help you visualize the branch structure?
 
+	The diagram shows points were more than one commit has the same parent,
+	which is where the branches diverge.  It also shows sequentially the
+	commits that are on a single branch, separate from the actual (date)
+	sequence of the commits.
+
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
