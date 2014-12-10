@@ -30,6 +30,10 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+	Add only those files (expected to be) related to a specific change to the
+	the staging area.  Verify (all and only) the changes for a single logical
+	change are in the staging area using git diff --staged before doing commit
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
