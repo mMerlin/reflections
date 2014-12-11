@@ -68,5 +68,17 @@ the diagram the way we do?
 	2 distinct paths that the commit id (parents) follow back from the merge
 	point, to the common ancestor.
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+	automatic merging pros:
+		faster
+		less error prone ‘when’ merge is smart enough, in the simpler cases
+	automatic merging cons:
+		may have situations where it does the wrong thing
+	manual merging pros:
+		the user should know the merge context better than any automated system,
+		and should be able to make better/smarter choices
+	manual merging cons:
+		slower
+		prone to user errors/typos
