@@ -9,7 +9,12 @@ local?
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    A branch created locally might also get created by someone else, and pushed
+    to the remote.  An automatic update would either need to overwrite or merge
+    the duplicate branches, neither of which is probably correct.
+    The local repository might be a fork, so changes to the remote might not be
+    wanted at all, at least without verification that the changes fit with (the reason for) the forked version.
+    Minimize local (or remote) resource usage: storage space, bandwith.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
