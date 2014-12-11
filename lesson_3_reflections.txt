@@ -40,7 +40,12 @@ stored locally?
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    That would depend greatly on the context.  There are several other version
+    control systems, online and offline to use as alternatives.  There are also
+    specific collaboration tools, including google docs, drop box, ervernote,
+    and more.  Sneaker net with USB flash drives also works, or zip/tar archives
+    and email.  Easier or harder items would depend on the context, project
+    size, update frequency, amount of concurrent changes, and much more.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
