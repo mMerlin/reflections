@@ -57,5 +57,16 @@ How do the diagrams help you visualize the branch structure?
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+	The merge is equivalent to applying the changes (diffs) for each commit, on
+	both branches, back to the common parent / ancestor of the branch tips.  Or,
+	get the diffs from each branch tip back to the common ancesstor, and apply
+	both sets of changes to that ancestor.
+
+	The single branch splits at the common ancestor commit id, then each of the
+	(now split) branches will (can) have one or more commits.  At the merge, the
+	the 2 branches join back into a single branch again.  The diagram shows the
+	2 distinct paths that the commit id (parents) follow back from the merge
+	point, to the common ancestor.
+
 What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
 manually?
