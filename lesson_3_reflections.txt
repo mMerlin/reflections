@@ -33,7 +33,9 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    Allows local access to information about the synchronization state between
+    the local and remote.  The lets git provide earlier warning about some
+    siturations that are likely to need user intervention.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
