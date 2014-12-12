@@ -50,4 +50,16 @@ and what would be harder?
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    Experimental changes that need to be reviewed (by others) before being added
+    to the main (master) branch.
+    A single (conceptual) change that needs input from multiple people before
+    being complete.
+    A single (conceptual) change that needs time to complete before being ready
+    for the main stream.
+    A set of changes that need to be rolled out as a set, while still doing
+    other changes to the production version.
+
+    Changes to master (typically) get in front of more eyes sooner.  Faster
+    update cycles.
+    Using (temporary) branches makes peer review easier as part of the standard
+    work flow.
