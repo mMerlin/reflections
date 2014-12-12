@@ -8,10 +8,16 @@ was introduced?
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-    There are many ways and reasons.  Able to easily see and rollback previous
-    changes that are later discovered to be incorrect.  See what sections of
-    the code have been changing most often.  See changes that then needed to be
-    changed again to learn common errors.
+    There are many ways and reasons.  This makes it easy to see and rollback
+    previous changes that are later discovered to be incorrect.  This is true
+    whether the changes are recent, or many versions (revisions) ago.  It also
+    makes it easy to recover code from earlier versions that turn out to be
+    needed (again) now, but were removed for an earlier version.  With a bit of
+    work, it also lets you see what sections of the code (document) have been
+    changing most often (and why).  If the reason is multiple bug fixes, that
+    would be a good indication of a sections that needs to be rethought /
+    refactored.  See changes that then needed to be changed again to learn
+    common errors for the project (or specific developers).
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
