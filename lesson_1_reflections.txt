@@ -1,9 +1,10 @@
 How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-    By showing only the lines that had changed, the amount of checking was
-    greatly reduced.  It also keeps the changes conveniently close together
-    on the screen, making the manual checking easier.
+    By showing only the lines that had changed (and their context), the amount
+    of (manual) checking was greatly reduced.  The diff output also keeps the
+    change (blocks) conveniently close together on the screen, making the
+    required manual checking easier.
 
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
