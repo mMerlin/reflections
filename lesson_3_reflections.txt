@@ -5,6 +5,7 @@ local?
     When offsite backup is a consideration.
     When want to easily share / publish a project, and the remote repository
     is more easily accessible (or searchable/findable).
+    When multiple people are making changes to the repository.
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
@@ -12,14 +13,16 @@ automatically stay up-to-date with your remote repository?
     A branch created locally might also get created by someone else, and pushed
     to the remote.  An automatic update would either need to overwrite or merge
     the duplicate branches, neither of which is probably correct.
-    The local repository might be a fork, so changes to the remote might not be
-    wanted at all, at least without verification that the changes fit with (the reason for) the forked version.
+    The local repository might be a (conceptual) project fork, so changes to
+    the remote might not be wanted at all, at least without verification that
+    the changes fit with (the reason for) the forked version.
     Minimize local (or remote) resource usage: storage space, bandwith.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    A fork is a repository copy done by GitHub, from GitHub, to GitHub.
+    A fork is a repository copy done by GitHub, from GitHub, to GitHub.  Since
+    this is only on GitHub, the working area is not accessible to regular users.
     Clone creates a local copy of a respository.  The source of the copy can be
     either local or remote.  The created repository is setup to use the source
     repository as the remote/origin.
@@ -28,14 +31,15 @@ use one instead of another?
     that branch, and the branch that was original associated with the starting
     commit, that commit will be the parent to 2 different commits.  The
     starting commit could already have child commits associated at the time the
-    branch is created.
+    branch is created, since the branch can be create on any commit, not just
+    the current tip.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
     Allows local access to information about the synchronization state between
-    the local and remote.  The lets git provide earlier warning about some
-    siturations that are likely to need user intervention.
+    the local and remote.  This lets git provide earlier warning about some
+    situations that are likely to need user intervention.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
@@ -45,7 +49,8 @@ and what would be harder?
     specific collaboration tools, including google docs, drop box, ervernote,
     and more.  Sneaker net with USB flash drives also works, or zip/tar archives
     and email.  Easier or harder items would depend on the context, project
-    size, update frequency, amount of concurrent changes, and much more.
+    size, update frequency, amount of concurrent changes, rate of conflicting
+    changes, and much more.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
@@ -62,4 +67,6 @@ master?  What benefits does each approach have?
     Changes to master (typically) get in front of more eyes sooner.  Faster
     update cycles.
     Using (temporary) branches makes peer review easier as part of the standard
-    work flow.
+    work flow.  It also makes wider (beyond the local repository) testing
+    easier, without introducing unstable changes to the main (master) branch
+    used by the majority of users.
