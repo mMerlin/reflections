@@ -2,29 +2,31 @@ What happens when you initialize a repository? Why do you need to do it?
 
 	Initializing creates a (hidden) ".git" subdirectory in the current /
 	specified directory.  That directory contains a bunch of additional files
-	and subdirectories containing the repository information.  Effectively, the
-	.git directory is a database that holds (will hold) all of the commit
-	(state) information.  This is needed to tell git / the system that the
-	directory is to be tracked / managed by git; that it is a working directory
-	for a git repository.
+	and subdirectories containing the repository (meta data) information.
+	Effectively, the .git directory is a database that holds (will hold) all of
+	the commit (state) information and history.  This is needed to tell git /
+	the system that the	directory is to be tracked / managed by git; that it is
+	a working directory	for a git repository.  There is a variant where the
+	repository is created, but no working directory.  At least not in the same
+	place.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-	The staging area contains only those files that are candidates for the next
-	commit.  The repository contains all versions of all files, plus additional
-	information, for all previous commits.  The working directory can really
-	contain anything: Each file in the working directory could match a file in
-	the stating area, any commited version of a file, a file that does not
-	exist in either the staging area or repository.  Files that existing in the
-	staging area or repository might not existing (any longer) in the working
-	directory.
+	The staging area contains files that are part of the latest commit, plus
+	any candidates for the next	commit.  The repository contains all versions
+	of all files, plus additional information, for all previous commits.  The
+	working directory can really contain anything: Each file in the working
+	directory could match a file in	the staging area, any commited version of a
+	file, a file that does not exist in either the staging area or repository.
+	Files that exist in the staging area or repository might not existing (any
+	longer) in the working directory.
 
 	The staging area provides a way to group changes in preparation for a
 	single logical commit.  Even if the modified files in the working directory
 	are for multiple logical changes, only those files associated with one of
 	the (logical) changes needs to be put into the staging area.  This only
-	works of course, if all modifications in a single file are for a single
+	works of course, if all modifications to a single file are for a single
 	change.
 
 How can you use the staging area to make sure you have one commit per logical
@@ -32,7 +34,8 @@ change?
 
 	Add only those files (expected to be) related to a specific change to the
 	the staging area.  Verify (all and only) the changes for a single logical
-	change are in the staging area using git diff --staged before doing commit
+	change are in the staging area using git diff --staged before doing the
+	commit.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
@@ -42,9 +45,9 @@ organized? How would branches help?
 	Multiple developer concurrent work on different features or bugs.
 
 	An active / checked out branch simplifies making and tracking a (logical)
-	series of changes while unrelated changes can still occur in other branches.
-	The other changes could be done by other people, or in other work areas, or
-	by switching (checkout) branches as needed.  Using good names for the
+	series of changes while unrelated changes can still occur (unaffected) in
+	other branches.  The other changes could be done by other people, or in
+	other work areas, or by switching (checkout) branches as needed.  Using good names for the
 	branches shows the different things being worked on.
 
 How do the diagrams help you visualize the branch structure?
@@ -60,13 +63,16 @@ the diagram the way we do?
 	The merge is equivalent to applying the changes (diffs) for each commit, on
 	both branches, back to the common parent / ancestor of the branch tips.  Or,
 	get the diffs from each branch tip back to the common ancesstor, and apply
-	both sets of changes to that ancestor.
+	both sets of changes to that ancestor.  Or, (really/usually) get the diffs
+	bettween the common ancestor and the tip of one of the branches, and apply
+	those diffs to the tip of the other branch.
 
 	The single branch splits at the common ancestor commit id, then each of the
 	(now split) branches will (can) have one or more commits.  At the merge, the
 	the 2 branches join back into a single branch again.  The diagram shows the
 	2 distinct paths that the commit id (parents) follow back from the merge
-	point, to the common ancestor.
+	point, to the common ancestor.  In this view, the actual order of the
+	commits (between branches) is not shown / not important.
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
