@@ -42,18 +42,23 @@ files in one commit, while others, like Google Docs, treat each file separately?
 How can you use the commands git log and git diff to view the history of files?
 
     git log shows information about the revisions over time, with author, date,
-    a (hopefully) descriptive message about the reason for the changes.  git
-    diff shows details of the actual changes to each file in the repository
-    (typically a project).  The combination should give a multiple level view
-    of the history.
+    a (hopefully) descriptive message about the reason for the changes, and the
+    parent commit.  git diff shows details of the actual changes to each file
+    in the repository (typically a project).  The changes can be displayed
+    between any 2 commits in the reposoitory.  The combination should give a
+    multiple level view of the history.
 
 How might using version control make you more confident to make changes that
 could break something?
 
     Version control allows (easy) reverting to a previous version, so risky
-    changes become much safer.  They can reliably be undone if they are found
-    to cause new problems.
+    changes become much safer.  They can reliably (and quickly) be undone, if
+    they are found to cause new problems.  Using a new branch for the changes
+    simplifies even more.  The risky changes never even show up in the main
+    (master) branch, until/unless they are confirmed to be (at least mostly)
+    working.
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-    version control of text files.  Code and notes.
+    Version control of text files that change and grow over time.  Code and
+    notes.
